@@ -1,0 +1,116 @@
+User related tables 
+CUSR
+IUSR
+CSIP
+Authuser.UCDT
+
+CIF details
+BRCM 
+CULN
+
+Segment maint
+SGMT
+
+Transaction related
+TRQD / TRQH - Request
+TXND / TXNH
+
+Bank repositories
+BKMT
+BKDT
+BKRT
+
+Currency Maint
+CRDC
+CRAL
+
+Cross currency Txns
+ERAT
+TRCD
+
+Counterparty Info
+CPAY
+PAYM
+BENE history table
+
+Workflow Maint
+
+WRDT / WRHT
+WCHT - Amount details
+MWFT - approval related
+
+CURM and URMP - role mapping
+URMT
+
+
+Menu related
+VMNP
+VMOT 
+ASML  - access scheme menu linkage 
+MOTT table is used for Admin menus entries for multiple languages.
+
+Accounts 
+UEDT
+
+URI - API -> menuid
+UMMT
+
+File upload
+FFPM
+FUPM
+FULM
+FDTT
+File upload Errors 
+FUED
+FUTT
+FUCT,FURT,FUDT - file details 
+
+select * from FUPT; //Product Definition
+select * from FUFD where product_type='PAP' and bank_id='024' and fld_id like 'ROUTING_NUMBE%';//
+select * from FFPM where product_type='PAP' and bank_id='024' and fld_id like 'ROUTING_NUMBE%';;
+
+select * from FUPT where product_type='SAL' and bank_id='024';
+select * from FDTT ;where file_sequence_num='54627';
+select * from FUTT; where file_sequence_num='36925';
+select * from SCDT order by r_mod_time desc;
+select * from TKDT where task_name in ('ASYNCBATCHPROC','GFPRECPROCBATCH','MDMCBATCH') and bank_id='024';
+select * from TKST order by r_mod_time desc;
+
+
+Transaction Type definition
+TNTP , FCOT, FDET
+
+Bank holidays
+HOLT
+
+Network 
+Network products - NPDT
+Network properties - NPRT
+Network - NWMT
+Cutoff - COTM
+Network availability - NOTM
+
+State code - STCD
+Language - LANG
+Branch Maint - BRPF
+Country param - CPRM
+Dyna cache- DCIT
+CDCI controller - cdcf
+Common code - COCD
+Error code - VERT
+Prop mgr - PRPM
+Service requests - SBMT
+City code - CTDT
+Audit  - aufc, aflt,aafc, ausc, aslt , aadt , asdt , cadt
+
+AuthUser
+
+AMPM - Authmode property matrix - auth scheme auth mode
+CTAM - corp txn auth mode - Transaction auth details
+
+Limits:
+Entry and approval - CLMT
+Txn Limits - LMUL
+Eff txn type - TXMP
+
+
